@@ -421,14 +421,14 @@ function checkCustomerLogin() {
 // Redirect if the user is not a logged-in customer
 function protectBookingsPage() {
     if (!checkCustomerLogin()) {
-        window.location.replace("Home.html");
+        window.location.replace("index.html");
     }
 }
 
 
 // Check immediately when Booking.html loads
 if (!checkCustomerLogin()) {
-    window.location.replace("Home.html");
+    window.location.replace("index.html");
 } else {
     setupBookingFilters();
     displayBookings();
