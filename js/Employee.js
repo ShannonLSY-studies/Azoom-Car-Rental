@@ -39,7 +39,7 @@ function getCurrentEmployee() {
 function protectEmployeePage() {
 
     if (!getCurrentEmployee()) {
-        window.location.replace("Home.html");
+        window.location.replace("index.html");
         return false;
     }
 
@@ -59,7 +59,7 @@ if (logoutButton !== null) {
 
         localStorage.removeItem("azoomUser");
 
-        window.location.replace("Home.html");
+        window.location.replace("index.html");
     });
 }
 
