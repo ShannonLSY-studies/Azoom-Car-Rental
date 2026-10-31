@@ -1,0 +1,314 @@
+
+body {
+    margin: 0;
+    background-color: #0F172A;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+}
+
+.payment-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #040F21;
+}
+
+.payment-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 35px;
+    box-sizing: border-box;
+    background-color: #0F172A;
+    border: 1px solid #263950;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+.payment-container h1 {
+    margin-top: 0;
+    font-size: 30px;
+}
+
+.payment-intro {
+    color: #A8B6C8;
+    margin-bottom: 30px;
+}
+
+.payment-content {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.booking-summary,
+.card-payment {
+    padding: 25px;
+    background-color: #091629;
+    border: 1px solid #263950;
+    border-radius: 12px;
+}
+
+.booking-summary h2,
+.card-payment h2 {
+    margin-top: 0;
+}
+
+.booking-summary p {
+    color: #A8B6C8;
+    margin-bottom: 6px;
+}
+
+.booking-summary h3 {
+    margin-top: 0;
+}
+
+
+/* Collection and return dates side by side */
+.date-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.date-row > div {
+    min-width: 0;
+}
+
+.date-row label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+.date-row input {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+/* Two pick-up location cards */
+.location-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.location-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #0F172A;
+    border: 1px solid #30465E;
+    border-radius: 8px;
+    cursor: pointer;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.location-card:hover {
+    border-color: #00F5D4;
+}
+
+/* Keep the radio button small */
+.location-card input[type="radio"] {
+    width: auto;
+    margin: 0 0 5px;
+    accent-color: #00F5D4;
+}
+
+/* Location address text */
+.location-card span {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.location-card small {
+    color: #A8B6C8;
+    font-size: 12px;
+}
+
+/* Highlight the selected location */
+.location-card:has(input:checked) {
+    border-color: #00F5D4;
+    background-color: #10283A;
+}
+
+/* Booking Summary Labels */
+.booking-summary label {
+    display: block;
+    font-size: 14px;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+/* Booking Summary Date Inputs and Location Dropdown */
+.booking-summary input:not([type="radio"]),
+.booking-summary select {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    background-color: #0F172A;
+    border: 1px solid #30465E;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Date text and calendar icon */
+.booking-summary input[type="date"] {
+    color-scheme: dark;
+}
+
+/* Highlight fields when selected */
+.booking-summary input:focus,
+.booking-summary select:focus {
+    outline: none;
+    border-color: #00F5D4;
+}
+
+/* Dropdown options */
+.booking-summary select option {
+    background-color: #0F172A;
+    color: #FFFFFF;
+}
+
+/* Spacing around the booking summary divider */
+.booking-summary hr {
+    border: none;
+    border-top: 1px solid #263950;
+    margin: 22px 0;
+}
+
+/* Damage charge note inside the booking summary */
+.booking-summary .payment-note {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.total-price {
+    color: #00F5D4;
+    font-size: 28px;
+}
+
+.card-payment form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-payment label {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.card-payment input {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    background-color: #0F172A;
+    border: 1px solid #30465E;
+    border-radius: 6px;
+}
+
+.card-payment input:focus {
+    outline: none;
+    border-color: #00F5D4;
+}
+
+.card-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.card-row div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pay-btn {
+    margin-top: 20px;
+    padding: 14px;
+    background-color: #00F5D4;
+    color: #040F21;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.pay-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pay-btn:hover {
+    background-color: #FFFFFF;
+}
+
+.payment-note {
+    margin-top: 25px;
+    color: #A8B6C8;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* =========================================
+   INPUT VALIDATION
+   ========================================= */
+
+.input-error {
+    display: block;
+    color: #ff4d4d;
+    font-size: 13px;
+    margin-top: 5px;
+    min-height: 16px;
+}
+
+/* Red border when input is invalid */
+.input-invalid {
+    border: 2px solid #ff4d4d !important;
+    outline: none;
+}
+
+/* Optional: red glow around invalid input */
+.input-invalid:focus {
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.4);
+}
+
+
+/* Responsive layout for smaller screens */
+@media (max-width: 700px) {
+    .payment-container {
+        padding: 20px;
+    }
+
+    .payment-content {
+        grid-template-columns: 1fr;
+    }
+
+    .date-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .location-options {
+        grid-template-columns: 1fr;
+    }
+}

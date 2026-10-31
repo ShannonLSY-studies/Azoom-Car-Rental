@@ -1,0 +1,196 @@
+/*  ==========================================
+        BODY
+    =========================================*/
+
+body {
+    background-color: #0F172A;
+    
+}
+/*  -----------------------------------------
+        Hero section
+    -----------------------------------------*/
+.hero {
+    background-image: url("../Images/Neon Velocity_ Futuristic Electric Sedan.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    min-height: calc(100vh - 90px);
+    box-sizing: border-box;
+    padding: 8vw 5% 80px;
+}
+.hero h5 {
+    font-size: clamp(14px, 1.2vw, 20px);
+    padding-bottom: 10px;
+    color: #00F5D4;
+}
+.hero h1{
+    font-size: clamp(28px, 3.5vw, 55px);
+}
+.hero .line2 {
+    padding-bottom: 20px;
+    color: #00F5D4;
+}
+.hero p {
+    font-size: clamp(16px, 1.2vw, 20px);
+    padding-bottom: 10px;
+}
+.hero .book-car-btn {
+    display: inline-block;
+    font-size: clamp(14px, 1vw, 30px);
+    color: #040F21;
+    font-weight: bold;
+    background-color: #00F5D4;
+    border: none;
+    border-radius: 90px;
+
+    padding: clamp(10px, 1vw, 16px)
+             clamp(20px, 2vw, 35px);
+    margin-top: 20px;
+
+    text-decoration: none;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero .book-car-btn:hover {
+    background-color: white;
+    cursor: pointer;
+
+    transform: translateY(-3px);
+    box-shadow: 0 0 8px #00F5D4;
+}
+
+/*  -----------------------------------------
+        Values section
+    -----------------------------------------*/
+.values {
+    text-align: center;
+    padding: clamp(40px, 6vw, 100px) 5%;
+    box-sizing: border-box;
+    background-color: #041022;
+}
+
+.values h5 {
+    color: #00F5D4;
+    font-size: clamp(14px, 1.2vw, 20px);
+}
+.values > img {
+    width: clamp(180px, 40%, 500px);
+    max-width: 100%;
+    height: auto;
+}
+.feature-card img {
+    width: clamp(40px, 40%, 60px);
+    max-width: 100%;
+    height: auto;
+}
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(12px, 2vw, 30px);
+    max-width: 1400px;
+    width: 100%;
+    margin: clamp(25px, 3vw, 45px) auto 0;
+    box-sizing: border-box;
+}
+.feature-card {
+    background-color: #07172D;
+    border: 1px solid #00F5D4;
+    border-radius: clamp(10px, 1.2vw, 18px);
+    padding: clamp(15px, 2vw, 35px);
+    box-sizing: border-box;
+}
+.feature-card h4 {
+    text-align: center;
+    font-size: clamp(20px, 1.4vw, 25px);
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+.feature-card p {
+    font-size: clamp(15px, 1vw, 20px);
+    line-height: 1.6;
+    margin: 5%;
+}
+/* Smaller screens */
+@media (max-width: 900px) {
+    .features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
+/*  -----------------------------------------
+        Review section
+    -----------------------------------------*/
+.reviews {
+    text-align: center;
+    padding: clamp(40px, 6vw, 100px) 5%;
+    box-sizing: border-box;
+    background-color: #041022;
+
+    background-image: url("../Images/Review Background4.png");
+        
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    min-height: calc(100vh - 90px);
+    box-sizing: border-box;
+}
+.reviews  h5 {
+    color: #00F5D4;
+    font-size: clamp(14px, 1.5vw, 24px);
+}
+.reviews  h2 {
+    padding-top: 3%;
+    font-size: clamp(25px, 2.5vw, 40px);
+}
+.reviewTable {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(12px, 2vw, 30px);
+    max-width: 1400px;
+    width: 100%;
+    margin: clamp(25px, 3vw, 45px) auto 0;
+    box-sizing: border-box;
+    padding-top: 3%;
+}
+.reviewComments {
+    text-align: left;
+    background-color: #07172D;
+    border: 1px solid #00F5D4;
+    border-radius: clamp(10px, 1.2vw, 18px);
+    padding: clamp(15px, 2vw, 35px);
+    box-sizing: border-box;
+}
+/* The stars */
+.reviewComments h1 {
+    color: #00F5D4;
+    font-size: clamp(25px, 2.5vw, 40px);
+}
+.reviewComments p {
+    font-size: clamp(15px, 1.2vw, 22px);
+    line-height: 1.6;
+    margin: 10px 0;
+}
+.reviewProfile {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.reviewProfile img{
+    width: clamp(30px, 5vw, 45px);
+    height: auto;
+    flex-shrink: 0;
+    margin-right: 5%;
+}
+@media (max-width: 768px) {
+    .reviewTable {
+        grid-template-columns: 1fr;
+    }
+}

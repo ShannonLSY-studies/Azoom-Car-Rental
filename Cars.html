@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width, initial-scale=1.0"/>
+        <title>AZoom Car Rental</title>
+
+        <link rel="stylesheet" href="css/HeadFoot.css">
+
+        <link rel="stylesheet" href="css/CarStyle.css">
+        <script src="js/CarsJava.js" defer></script>
+        
+        <link rel="stylesheet" href="css/Login.css">
+        <script src="js/Login.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div class="mainHeader">
+                <a href="#top">
+                    <img src="Images/Logo-01.png" alt="AZoom" class="logo">
+                </a>
+                <nav>
+                    <a href="Home.html">Home</a>
+                    <a class="currentPg" href="Cars.html">Our Fleet</a>
+                    <a href="Booking.html" id="bookings-link">My Bookings</a>
+                </nav>
+                <div class="user-actions">
+                    <a href="#" class="login-btn">
+                        <img src="Images/profile.png" class="profile">
+                        <span id="login-btn-text">Login / Signup</span>
+                    </a>
+                </div>
+            </div>
+            <hr class="section-divider">         
+        </header>
+        <section class="cars">
+            <div class="section-heading">
+                <p class="section-label">OUR FLEET</p>
+                <h2>Choose Your Perfect Car</h2>
+                <p>From economical city cars to premium vehicles, we have something for everyone.</p>
+            </div>
+            
+            <!-- CAR FILTERS -->
+            <div class="car-filters">
+                <div class="search-N-Slide">
+                    <!-- Search bar -->
+                    <input
+                        type="text"
+                        id="car-search"
+                        placeholder="Search cars..."
+                    >
+                    
+                    <!-- Daily price slider -->
+                    <div class="price-filter">
+                        <label for="max-price">
+                            Maximum Daily Price: $<span id="price-value">150</span>
+                        </label>
+
+                        <input
+                            type="range"
+                            id="max-price"
+                            min="65"
+                            max="150"
+                            value="150"
+                            step="5"
+                        >
+                    </div>
+                </div>
+                <div class="filters">
+                    <!-- Car Brand filter -->
+                    <select id="car-brand">
+                        <option value="All">All Car Brands</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Honda">Honda</option>
+                        <option value="Hyundai">Hyundai</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Mercedes-Benz">Mercedes-Benz</option>
+                        <option value="Tesla">Tesla</option>
+                        <option value="BYD">BYD</option>
+                    </select>
+                    <!-- Car type filter -->
+                    <select id="car-type">
+                        <option value="All">All Car Types</option>
+                        <option value="Economy">Economy</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Luxury">Luxury</option>
+                        <option value="Electric">Electric</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- CAR LIST -->
+            <div class="car-grid">
+
+                <!-- Car 1 -->
+                <article class="car-card" data-name="BMW 3 Series" data-brand="BMW"
+                data-type="Luxury" data-price="150">
+                    <div class="car-image">
+                        <img src="Images/Cars/BMW 3 Series.png" alt="BMW">
+                    </div>
+                    <div class="car-content">
+                        <p class="car-category">LUXURY</p>
+                        <h3>BMW 3 Series</h3>
+                        <p>Travel in style with our premium luxury vehicle.</p>
+                        <div class="car-details">
+                            <span>5 Seats</span>
+                            <span>0 Availability</span>
+                        </div>
+                        <div class="car-footer">
+                            <p class="price"><strong>$150</strong> / day</p>
+                            <a href="#" class="btn rent-btn">Rent Now</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Car 2 -->
+                <article class="car-card" data-name="Toyota RAV4" data-brand="Toyota"
+                data-type="SUV" data-price="100">
+                    <div class="car-image">
+                        <img src="Images/Cars/Toyota RAV4 White.png" alt="RAV4">
+                    </div>
+                    <div class="car-content">
+                        <p class="car-category">SUV</p>
+                        <h3>Toyota RAV4</h3>
+                        <p>Comfortable and practical for business or leisure.</p>
+                        <div class="car-details">
+                            <span>5 Seats</span>
+                            <span>0 Availability</span>
+                        </div>
+                        <div class="car-footer">
+                            <p class="price"><strong>$100</strong> / day</p>
+                            <a href="#" class="btn rent-btn">Rent Now</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Car 3 -->
+                <article class="car-card" data-name="Honda Civic" data-brand="Honda"
+                data-type="Sedan" data-price="80">
+                    <div class="car-image">
+                        <img src="Images/Cars/Honda Civic White.jpg" alt="Honda Civic">
+                    </div>
+                    <div class="car-content">
+                        <p class="car-category">SEDAN</p>
+                        <h3>Honda Civic</h3>
+                        <p>Spacious and comfortable for family adventures.</p>
+                        <div class="car-details">
+                            <span>5 Seats</span>
+                            <span>0 Availability</span>
+                        </div>
+                        <div class="car-footer"><p class="price"><strong>$80</strong> / day</p>
+                            <a href="#" class="btn rent-btn">Rent Now</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Car 4 -->
+                <article class="car-card" data-name="BYD Atto 3" data-brand="BYD"
+                data-type="Electric" data-price="100">
+                    <div class="car-image">
+                        <img src="Images/Cars/BYD Atto 3 Black.png" alt="BYD Atto 3">
+                    </div>
+                    <div class="car-content">
+                        <p class="car-category">ELECTRIC</p>
+                        <h3>BYD Atto 3</h3>
+                        <p>Travel in style with our premium luxury vehicle.</p>
+                        <div class="car-details">
+                            <span>5 Seats</span>
+                            <span>0 Availability</span>
+                        </div>
+                        <div class="car-footer">
+                            <p class="price"><strong>$100</strong> / day</p>
+                            <a href="#" class="btn rent-btn">Rent Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Car 5-->
+                <article class="car-card" data-name=" Toyota Corolla Altis" data-brand="Toyota"
+                data-type="Economy" data-price="65">
+                    <div class="car-image">
+                        <img src="Images/Cars/Toyota Corolla Altis Black.png" alt="Toyota Corolla Altis">
+                    </div>
+                    <div class="car-content">
+                        <p class="car-category">ECONOMY</p>
+                        <h3>Toyota Corolla Altis</h3>
+                        <p>Compact and fuel-efficient. Perfect for city driving.</p>
+                        <div class="car-details">
+                            <span>5 Seats</span>
+                            <span>0 Availability</span>
+                        </div>
+                        <div class="car-footer">
+                            <p class="price"><strong>$65</strong> / day</p>
+                            <a href="#" class="btn rent-btn">Rent Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Car 6 -->
+                <article class="car-card" data-name="Mercedes-Benz C-Class" data-brand="Mercedes-Benz"
+                data-type="Luxury" data-price="150">
+                    <div class="car-image">
+                        <img src="Images/Cars/Mercedes-Benz C-Class White.png" alt="Mercedes-Benz">
+                    </div>
+                    <div class="car-content">
+                        <p class="car-category">LUXURY</p>
+                        <h3>Mercedes-Benz C-Class</h3>
+                        <p>Travel in style with our premium luxury vehicle.</p>
+                        <div class="car-details">
+                            <span>5 Seats</span>
+                            <span>0 Availability</span>
+                        </div>
+                        <div class="car-footer">
+                            <p class="price"><strong>$150</strong> / day</p>
+                            <a href="#" class="btn rent-btn">Rent Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Car 7 -->
+                <article class="car-card" data-name="Tesla Model 3" data-brand="Tesla"
+                data-type="Electric" data-price="120">
+                    <div class="car-image">
+                        <img src="Images/Cars/Tesla Model 3 White.png" alt="Tesla">
+                    </div>
+                    <div class="car-content">
+                        <p class="car-category">ELECTRIC</p>
+                        <h3>Tesla Model 3</h3>
+                        <p>Travel in style with our premium luxury vehicle.</p>
+                        <div class="car-details">
+                            <span>5 Seats</span>
+                            <span>0 Availability</span>
+                        </div>
+                        <div class="car-footer">
+                            <p class="price"><strong>$120</strong> / day</p>
+                            <a href="#" class="btn rent-btn">Rent Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Car 8 -->
+                <article class="car-card" data-name="Hyundai Tucson" data-brand="Hyundai"
+                data-type="SUV" data-price="110">
+                    <div class="car-image">
+                        <img src="Images/Cars/Hyundai Tucson Grey.png" alt="Hyundai Tucson">
+                    </div>
+                    <div class="car-content">
+                        <p class="car-category">SUV</p>
+                        <h3>Hyundai Tucson</h3>
+                        <p>Travel in style with our premium luxury vehicle.</p>
+                        <div class="car-details">
+                            <span>5 Seats</span>
+                            <span>0 Availability</span>
+                        </div>
+                        <div class="car-footer">
+                            <p class="price"><strong>$110</strong> / day</p>
+                            <a href="#" class="btn rent-btn">Rent Now</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+        <footer>
+            <hr class="section-divider">
+            <div class="mainFooter">
+                <section class="AZoomNTagLine">
+                    <img src="Images/Logo-01.png" alt="AZoom">
+                    <p>Electric. Effortless. Yours.</p>
+                </section>
+                <section class="socials">
+                    <p>Follow Us</p>
+                    <div>
+                        <a href="https://www.instagram.com"><img src="Images/instagram.png" alt="Instagram" class="icon"></a>
+                        <a href="https://www.facebook.com"><img src="Images/facebook.png" alt="Facebook" class="icon"></a>
+                        <a href="https://x.com"><img src="Images/X.png" alt="X" class="icon"></a>
+                    </div>
+                </section>
+                <section class="contacts">
+                    <p>Contact Us</p>
+                    <a href="" class="link">
+                        <img src="Images/email.png" alt = "mail icon" >
+                        <p>contactUs@AZoom.com</p>
+                    </a>
+                    <a href="" class="link">
+                        <img src="Images/phone.png" alt = "phone icon" >
+                        <p>+65 9652 6427</p>
+                    </a>
+                </section>
+                <section class="location">
+                    <p>Our Locations</p>
+                    <a href="" class="link">
+                        <img src="Images/whiteLocation.png" alt = "location icon" >
+                        <p>170 Upper Bukit Timah Rd, Singapore 588179</p>
+                    </a>
+                    <a href="" class="link">
+                        <img src="Images/whiteLocation.png" alt = "location icon" >
+                        <p>23 Changi South Ave 2, Singapore 486443</p>
+                    </a>
+                </section>
+            </div>
+            <hr class="section-divider">
+            <p>&copy; 2026 AZoom. All rights reserved.</p>
+        </footer>
+        <!-- Login / Sign Up Popup -->
+        <div id="login-modal" class="modal-overlay">
+            <div class="login-popup">
+                <button type="button" id="close-login" class="close-btn">
+                    &times;
+                </button>
+                <!-- Login Form -->
+                <div id="login-section">
+                    <h2>Welcome to AZoom</h2>
+                    <p>Log in to manage your bookings.</p>
+                    <form id="login-form">
+                        <label for="login-email">Email Address</label>
+                        <input type="email" id="login-email"
+                            placeholder="Enter your email" required>
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password"
+                            placeholder="Enter your password" required>
+                        <button type="submit" class="submit-btn">Login</button>
+                    </form>
+                    <p class="signup-text">
+                        Don't have an account?
+                        <a href="#" id="show-signup">Sign Up</a>
+                    </p>
+                </div>
+                <!-- Sign Up Form -->
+                <div id="signup-section" style="display: none;">
+                    <h2>Create an Account</h2>
+                    <p>Join AZoom to start booking your rides.</p>
+                    <form id="signup-form">
+                        <label for="signup-role">Account Type</label>
+                        <select id="signup-role" required>
+                            <option value="customer" selected>Customer</option>
+                            <option value="employee">Employee</option>
+                        </select>
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name"
+                            placeholder="Enter your name" required>
+                        <label for="signup-email">Email Address</label>
+                        <input type="email" id="signup-email"
+                            placeholder="Enter your email" required>
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password"
+                            placeholder="Create a password" required>
+                        <button type="submit" class="submit-btn">Sign Up</button>
+                    </form>
+                    <p class="signup-text">
+                        Already have an account?
+                        <a href="#" id="show-login">Login</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>   
+</html>

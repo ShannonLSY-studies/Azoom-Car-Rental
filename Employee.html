@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZoom Employee Dashboard</title>
+
+    <link rel="stylesheet" href="css/HeadFoot.css">
+    <link rel="stylesheet" href="css/Employee.css">
+    
+    <script src="js/Login.js" defer></script>
+    <script src="js/Employee.js" defer></script>
+    
+</head>
+
+<body>
+    <header>
+        <div class="mainHeader">
+            <a href="Home.html">
+                <img src="Images/Logo-01.png" alt="AZoom" class="logo">
+            </a>
+            <nav>
+                <a href="Home.html">Home</a>
+                <a href="Cars.html">Our Fleet</a>
+                <a class="currentPg" href="Booking.html">Customer Bookings</a>
+            </nav>
+           <a href="#" id="employee-logout" class="login-btn">
+                <span>Logout</span>
+            </a>
+        </div>
+        <hr class="section-divider">
+    </header>
+
+    <main class="employee-dashboard">
+        <p class="eyebrow">AZOOM STAFF PORTAL</p>
+        <h1>Employee Dashboard</h1>
+        <p class="dashboard-intro">
+            Manage reservations, inspect returned vehicles and record damages.
+        </p>
+
+        <!-- DASHBOARD FILTER CARDS -->
+        <section class="dashboard-stats">
+             <button type="button" class="stat-card"
+                    data-filter="Reserved">
+                <p>Reserved Bookings</p>
+                <h2 id="reserved-count">0</h2>
+            </button>
+
+            <button type="button" class="stat-card"
+                    data-filter="In Use">
+                <p>Cars In Use</p>
+                <h2 id="in-use-count">0</h2>
+            </button>
+
+            <button type="button" class="stat-card"
+                    data-filter="Pending Inspection">
+                <p>Pending Inspection</p>
+                <h2 id="returned-count">0</h2>
+            </button>
+
+            <button type="button" class="stat-card"
+                    data-filter="Pending Payment">
+                <p>Pending Payment</p>
+                <h2 id="inspection-count">0</h2>
+            </button>
+        </section>
+
+        <section class="bookings-section">
+            <h2>Booking & Return Management</h2>
+            <p class="table-note">
+                Manage vehicle collections and returns, record inspection remarks
+                and damage charges, and calculate the final rental cost based on
+                the actual return date.
+            </p>
+
+            <!-- ADDITIONAL BOOKING FILTERS -->
+            <div class="booking-filters">
+                <button type="button" class="booking-filter-btn"
+                        data-filter="All">
+                    All Bookings
+                </button>
+                
+                <button type="button" class="booking-filter-btn"
+                        data-filter="In Progress">
+                    In Progress Bookings
+                </button>
+
+                <button type="button" class="booking-filter-btn"
+                        data-filter="Completed">
+                    Completed
+                </button>
+            </div>
+
+            <p id="current-filter-label" class="current-filter-label">
+                Showing: Reserved Bookings
+            </p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Booking</th>
+                            <th>Vehicle</th>
+                            <th>Collection Date</th>
+                            <th>Collected</th>
+                            <th>Estimated Return Date</th>
+                            <th>Actual Return Date</th>
+                            <th>Returned</th>
+                            <th>Inspection Remarks</th>
+                            <th>Damage Charges ($)</th>
+                            <th>Inspected</th>
+                            <th>Vehicle Status</th>
+                            <th>Actions (Save / Request Payment)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employee-booking-list">
+                        <tr>
+                            <td colspan="12">Loading bookings...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="employee-message" class="employee-message"></p>
+        </section>
+    </main>
+    <footer>
+            <hr class="section-divider">
+            <div class="mainFooter">
+                <section class="AZoomNTagLine">
+                    <img src="Images/Logo-01.png" alt="AZoom">
+                    <p>Electric. Effortless. Yours.</p>
+                </section>
+                <section class="socials">
+                    <p>Follow Us</p>
+                    <div>
+                        <a href="https://www.instagram.com"><img src="Images/instagram.png" alt="Instagram" class="icon"></a>
+                        <a href="https://www.facebook.com"><img src="Images/facebook.png" alt="Facebook" class="icon"></a>
+                        <a href="https://x.com"><img src="Images/X.png" alt="X" class="icon"></a>
+                    </div>
+                </section>
+                <section class="contacts">
+                    <p>Contact Us</p>
+                    <a href="" class="link">
+                        <img src="Images/email.png" alt = "mail icon" >
+                        <p>contactUs@AZoom.com</p>
+                    </a>
+                    <a href="" class="link">
+                        <img src="Images/phone.png" alt = "phone icon" >
+                        <p>+65 9652 6427</p>
+                    </a>
+                </section>
+                <section class="location">
+                    <p>Our Locations</p>
+                    <a href="" class="link">
+                        <img src="Images/whiteLocation.png" alt = "location icon" >
+                        <p>170 Upper Bukit Timah Rd, Singapore 588179</p>
+                    </a>
+                    <a href="" class="link">
+                        <img src="Images/whiteLocation.png" alt = "location icon" >
+                        <p>23 Changi South Ave 2, Singapore 486443</p>
+                    </a>
+                </section>
+            </div>
+            <hr class="section-divider">
+            <p>&copy; 2026 AZoom. All rights reserved.</p>
+        </footer>
+</body>
+</html>
