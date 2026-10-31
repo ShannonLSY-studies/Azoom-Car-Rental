@@ -111,7 +111,7 @@ if (loginButton !== null) {
             updateLoginButton();
 
             // Return to the home page
-            window.location.href = "Home.html";
+            window.location.href = "index.html";
 
         } else {
             // User is not logged in: open the login popup
@@ -348,7 +348,7 @@ if (loginButton !== null) {
                 currentPage.endsWith("booking.html") ||
                 currentPage.endsWith("payment.html")
             ) {
-                window.location.replace("Home.html");
+                window.location.replace("index.html");
             }
         } else {
             openLoginPopup();
@@ -434,7 +434,7 @@ if (bookingsLink !== null) {
             event.preventDefault();
 
             alert("Please log in as a customer to view your bookings.");
-            window.location.href = "Home.html";
+            window.location.href = "index.html";
         }
     });
 }
