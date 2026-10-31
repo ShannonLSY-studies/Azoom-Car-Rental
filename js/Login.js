@@ -346,7 +346,7 @@ if (loginButton !== null) {
             const currentPage = window.location.pathname.toLowerCase();
             if (
                 currentPage.endsWith("booking.html") ||
-                currentPage.endsWith("payment.html")
+                currentPage.endsWith("Payment.html")
             ) {
                 window.location.replace("index.html");
             }
@@ -408,7 +408,7 @@ rentButtons.forEach(function(button) {
 
 
         // Go to the payment page
-        window.location.href = "payment.html";
+        window.location.href = "Payment.html";
     });
 });
 
@@ -444,8 +444,8 @@ if (bookingsLink !== null) {
    11. PROTECT THE PAYMENT PAGE
    ========================================= */
 
-if (window.location.pathname.toLowerCase().endsWith("/payment.html") ||
-    window.location.pathname.toLowerCase().endsWith("payment.html")) {
+if (window.location.pathname.toLowerCase().endsWith("/Payment.html") ||
+    window.location.pathname.toLowerCase().endsWith("Payment.html")) {
 
     if (!isCustomerLoggedIn()) {
         alert("Please log in as a customer to access the payment page.");
