@@ -444,8 +444,8 @@ if (bookingsLink !== null) {
    11. PROTECT THE PAYMENT PAGE
    ========================================= */
 
-if (window.location.pathname.toLowerCase().endsWith("/Payment.html") ||
-    window.location.pathname.toLowerCase().endsWith("Payment.html")) {
+if (window.location.pathname.toLowerCase().endsWith("/payment.html") ||
+    window.location.pathname.toLowerCase().endsWith("payment.html")) {
 
     if (!isCustomerLoggedIn()) {
         alert("Please log in as a customer to access the payment page.");
