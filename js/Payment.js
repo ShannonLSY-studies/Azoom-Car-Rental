@@ -13,13 +13,13 @@ function checkCustomerLogin() {
 
 // Redirect if the user is not a logged-in customer
 if (!checkCustomerLogin()) {
-    window.location.replace("Home.html");
+    window.location.replace("index.html");
 }
 
 // Check again when returning to the payment page
 window.addEventListener("pageshow", function () {
     if (!checkCustomerLogin()) {
-        window.location.replace("Home.html");
+        window.location.replace("index.html");
     }
 });
 
@@ -27,7 +27,7 @@ window.addEventListener("pageshow", function () {
 window.addEventListener("storage", function (event) {
     if (event.key === "azoomUser") {
         if (!checkCustomerLogin()) {
-            window.location.replace("Home.html");
+            window.location.replace("index.html");
         }
     }
 });
