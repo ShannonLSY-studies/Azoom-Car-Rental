@@ -102,29 +102,29 @@ body {
     width: 100%;
     appearance: none;
     height: 6px;
-    background: #CBD5E1;
+    background: #00F5D4; /* Cyan track */
     border-radius: 10px;
     outline: none;
     cursor: pointer;
 }
 
-/* Slider thumb - Chrome, Edge, Safari */
+/* Grey circular thumb - Chrome, Edge, Safari */
 #max-price::-webkit-slider-thumb {
     appearance: none;
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    background: #00F5D4;
+    background: #CBD5E1; /* Grey circle */
     cursor: pointer;
 }
 
-/* Slider thumb - Firefox */
+/* Grey circular thumb - Firefox */
 #max-price::-moz-range-thumb {
     width: 18px;
     height: 18px;
     border: none;
     border-radius: 50%;
-    background: #00F5D4;
+    background: #CBD5E1;
     cursor: pointer;
 }
 /* Stack the filters on smaller screens */
