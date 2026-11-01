@@ -196,6 +196,35 @@ footer > p {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+/* Mobile Header */
+@media (max-width: 600px) {
+    .mainHeader {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding: 12px;
+    }
+    .mainHeader > a {
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .logo {
+        width: 180px;
+    }
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    nav a {
+        font-size: 14px;
+    }
+
+    .login-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
 
 /* Mobile: 1 column x 4 rows */
 @media (max-width: 500px) {
