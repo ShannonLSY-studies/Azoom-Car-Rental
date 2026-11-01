@@ -100,7 +100,31 @@ body {
 /* Slider */
 #max-price {
     width: 100%;
-    accent-color: #00F5D4;
+    appearance: none;
+    height: 6px;
+    background: #CBD5E1;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Slider thumb - Chrome, Edge, Safari */
+#max-price::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #00F5D4;
+    cursor: pointer;
+}
+
+/* Slider thumb - Firefox */
+#max-price::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border: none;
+    border-radius: 50%;
+    background: #00F5D4;
     cursor: pointer;
 }
 /* Stack the filters on smaller screens */
