@@ -47,11 +47,27 @@ function filterCars() {
     });
 }
 
+// Update the slider's cyan track
+function updateSliderTrack() {
+    const min = Number(priceSlider.min);
+    const max = Number(priceSlider.max);
+    const value = Number(priceSlider.value);
+
+    const percentage = ((value - min) / (max - min)) * 100;
+
+    priceSlider.style.setProperty("--slider-progress", percentage + "%");
+}
+
 // Update the price label and filter the cars
 priceSlider.addEventListener("input", function() {
     priceValue.textContent = priceSlider.value;
+
+    updateSliderTrack();
     filterCars();
 });
+
+// Set the initial slider appearance
+updateSliderTrack();
 
 // Filter when the customer types or changes the car type
 searchInput.addEventListener("input", filterCars);
