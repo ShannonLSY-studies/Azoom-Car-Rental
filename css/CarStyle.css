@@ -1,13 +1,12 @@
 
-
-/*  ==========================================
-        BODY
-    =========================================*/
+/* =========================================
+   BODY
+   ========================================= */
 
 body {
     background-color: #0F172A;
-    
 }
+
 /* =========================================
    CAR SECTION
    ========================================= */
@@ -44,6 +43,7 @@ body {
     font-size: clamp(14px, 1.2vw, 18px);
     line-height: 1.6;
 }
+
 /* =========================================
    CAR FILTERS
    ========================================= */
@@ -51,12 +51,12 @@ body {
 .car-filters {
     display: flex;
     flex-direction: column;
-    align-items: left;
     gap: 20px;
     margin-bottom: 35px;
 }
 
 /* Search bar and dropdown */
+
 .car-filters input[type="text"],
 .car-filters select {
     padding: 12px 15px;
@@ -67,23 +67,28 @@ body {
     font-size: 15px;
 }
 
-/* Search bar takes up more space */
+/* Search bar and price slider */
+
+.search-N-Slide {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
 #car-search {
     flex: 1;
     min-width: 0;
 }
-.search-N-Slide {
-    display: flex;
-    align-items: left;
-    gap: 20px;
-}
 
 /* Dropdown */
+
 .car-filters select {
     width: 180px;
 }
 
 /* Price slider area */
+
 .price-filter {
     display: flex;
     flex-direction: column;
@@ -92,12 +97,14 @@ body {
 }
 
 /* Price label */
+
 .price-filter label {
     color: #CBD5E1;
     font-size: 14px;
 }
 
 /* Slider */
+
 #max-price {
     width: 100%;
     height: 14px;
@@ -116,6 +123,7 @@ body {
 }
 
 /* Circular thumb - Chrome, Edge, Safari */
+
 #max-price::-webkit-slider-thumb {
     appearance: none;
     width: 26px;
@@ -127,6 +135,7 @@ body {
 }
 
 /* Circular thumb - Firefox */
+
 #max-price::-moz-range-thumb {
     width: 26px;
     height: 26px;
@@ -135,18 +144,6 @@ body {
     border: none;
     cursor: pointer;
 }
-/* Stack the filters on smaller screens */
-@media (max-width: 700px) {
-    .car-filters {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    #car-search,
-    .car-filters select {
-        width: 100%;
-    }
-}
 
 /* =========================================
    CAR GRID
@@ -157,16 +154,6 @@ body {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: clamp(15px, 2vw, 25px);
 }
-/* =========================================
-   CAR GRID
-   ========================================= */
-
-.car-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: clamp(15px, 2vw, 25px);
-}
-
 
 /* =========================================
    INDIVIDUAL CAR CARD
@@ -188,7 +175,6 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 245, 212, 0.12);
 }
-
 
 /* =========================================
    CAR IMAGE
@@ -213,7 +199,6 @@ body {
     transform: scale(1.05);
 }
 
-
 /* =========================================
    CAR CONTENT
    ========================================= */
@@ -235,18 +220,17 @@ body {
 }
 
 .car-content h2 {
-    color: #111827;
+    color: #FFFFFF;
     font-size: clamp(17px, 1.4vw, 22px);
     margin-bottom: 10px;
 }
 
 .car-description {
-    color: #6B7280;
+    color: #CBD5E1;
     font-size: clamp(13px, 0.95vw, 15px);
     line-height: 1.6;
     margin-bottom: 20px;
 }
-
 
 /* =========================================
    CAR SPECIFICATIONS
@@ -264,10 +248,9 @@ body {
 }
 
 .car-details span {
-    color: #6B7280;
+    color: #CBD5E1;
     font-size: clamp(12px, 0.85vw, 14px);
 }
-
 
 /* =========================================
    PRICE AND RENT BUTTON
@@ -307,4 +290,58 @@ body {
 .car-footer .btn:hover {
     background-color: #00D9BD;
     transform: translateY(-2px);
+}
+
+/* =========================================
+   TABLET
+   2 CARS PER ROW
+   ========================================= */
+
+@media (max-width: 900px) {
+    .car-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =========================================
+   PHONE
+   1 CAR PER ROW
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .cars {
+        padding: 35px 5%;
+    }
+
+    /* Stack search and price slider */
+
+    .search-N-Slide {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    #car-search {
+        width: 100%;
+    }
+
+    /* Allow slider to fit phone width */
+
+    .price-filter {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Full-width dropdowns */
+
+    .car-filters select {
+        width: 100%;
+    }
+
+    /* 1 car per row */
+
+    .car-grid {
+        grid-template-columns: 1fr;
+    }
 }
