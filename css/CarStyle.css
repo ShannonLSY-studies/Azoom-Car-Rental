@@ -100,31 +100,7 @@ body {
 /* Slider */
 #max-price {
     width: 100%;
-    appearance: none;
-    height: 6px;
-    background: #00F5D4; /* Cyan track */
-    border-radius: 10px;
-    outline: none;
-    cursor: pointer;
-}
-
-/* Grey circular thumb - Chrome, Edge, Safari */
-#max-price::-webkit-slider-thumb {
-    appearance: none;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background: #CBD5E1; /* Grey circle */
-    cursor: pointer;
-}
-
-/* Grey circular thumb - Firefox */
-#max-price::-moz-range-thumb {
-    width: 18px;
-    height: 18px;
-    border: none;
-    border-radius: 50%;
-    background: #CBD5E1;
+    accent-color: #00F5D4;
     cursor: pointer;
 }
 /* Stack the filters on smaller screens */
